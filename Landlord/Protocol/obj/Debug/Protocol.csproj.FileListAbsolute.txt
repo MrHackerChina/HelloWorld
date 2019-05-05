@@ -1,0 +1,6 @@
+D:\Z_Work\ceshi\Client\Card\Assets\Plugins\Protocol.XML
+D:\Z_Work\ceshi\Client\Card\Assets\Plugins\Protocol.dll
+D:\Z_Work\ceshi\Client\Card\Assets\Plugins\Protocol.pdb
+D:\Z_Work\ceshi\Client\Protocol\obj\Debug\Protocol.csprojResolveAssemblyReference.cache
+D:\Z_Work\ceshi\Client\Protocol\obj\Debug\Protocol.dll
+D:\Z_Work\ceshi\Client\Protocol\obj\Debug\Protocol.pdb

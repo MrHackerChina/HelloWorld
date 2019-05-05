@@ -1,0 +1,5 @@
+D:\Z_Work\ceshi\Client\GameSever\bin\Debug\GameSever.dll
+D:\Z_Work\ceshi\Client\GameSever\bin\Debug\GameSever.pdb
+D:\Z_Work\ceshi\Client\GameSever\obj\Debug\GameSever.dll
+D:\Z_Work\ceshi\Client\GameSever\obj\Debug\GameSever.pdb
+D:\Z_Work\ceshi\Client\GameSever\obj\Debug\GameSever.csprojResolveAssemblyReference.cache

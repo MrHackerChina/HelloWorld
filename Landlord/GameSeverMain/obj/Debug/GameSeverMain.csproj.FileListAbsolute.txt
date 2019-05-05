@@ -1,0 +1,11 @@
+D:\Z_Work\ceshi\Client\GameSeverMain\bin\Debug\GameSeverMain.exe.config
+D:\Z_Work\ceshi\Client\GameSeverMain\bin\Debug\GameSeverMain.exe
+D:\Z_Work\ceshi\Client\GameSeverMain\bin\Debug\GameSeverMain.pdb
+D:\Z_Work\ceshi\Client\GameSeverMain\bin\Debug\GameSever.dll
+D:\Z_Work\ceshi\Client\GameSeverMain\bin\Debug\Protocol.dll
+D:\Z_Work\ceshi\Client\GameSeverMain\bin\Debug\GameSever.pdb
+D:\Z_Work\ceshi\Client\GameSeverMain\bin\Debug\Protocol.pdb
+D:\Z_Work\ceshi\Client\GameSeverMain\bin\Debug\Protocol.xml
+D:\Z_Work\ceshi\Client\GameSeverMain\obj\Debug\GameSeverMain.csprojResolveAssemblyReference.cache
+D:\Z_Work\ceshi\Client\GameSeverMain\obj\Debug\GameSeverMain.exe
+D:\Z_Work\ceshi\Client\GameSeverMain\obj\Debug\GameSeverMain.pdb

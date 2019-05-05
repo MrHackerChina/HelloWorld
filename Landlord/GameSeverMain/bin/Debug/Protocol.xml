@@ -1,0 +1,618 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>Protocol</name>
+    </assembly>
+    <members>
+        <member name="T:Protocol.Dto.Fight.AICardDto">
+            <summary>
+            AI 出牌的模型
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.AICardDto.IsOut">
+            <summary>
+            是否出牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.AICardDto.Weight">
+            <summary>
+            权重
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.AICardDto.Type">
+            <summary>
+            出牌的类型
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.AICardDto.CardDtoList">
+            <summary>
+            要出的牌
+            </summary>
+        </member>
+        <member name="M:Protocol.Dto.Fight.AICardDto.#ctor(System.Boolean)">
+            <summary>
+            初始化 不能出牌
+            </summary>
+            <param name="isOut"></param>
+        </member>
+        <member name="M:Protocol.Dto.Fight.AICardDto.#ctor(System.Boolean,System.Int32,System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            初始化 可以出牌
+            </summary>
+            <param name="isOut"></param>
+            <param name="weight"></param>
+            <param name="type"></param>
+            <param name="list"></param>
+        </member>
+        <member name="M:Protocol.Dto.Fight.AICardDto.Change(System.Boolean)">
+            <summary>
+            
+            </summary>
+            <param name="isOut"></param>
+        </member>
+        <member name="M:Protocol.Dto.Fight.AICardDto.Change(System.Boolean,System.Int32,System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            改变 模型
+            </summary>
+            <param name="isOut"></param>
+            <param name="weight"></param>
+            <param name="type"></param>
+            <param name="list"></param>
+        </member>
+        <member name="T:Protocol.Dto.Fight.CardDto">
+            <summary>
+            表示卡牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.CardDto.Name">
+            <summary>
+            路径
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.CardDto.Color">
+            <summary>
+            花色
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.CardDto.Weight">
+            <summary>
+            数值
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.DealDto.SelectCardList">
+            <summary>
+            选中要出的牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.DealDto.Length">
+            <summary>
+            长度
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.DealDto.Weight">
+            <summary>
+            权重
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.DealDto.Type">
+            <summary>
+            类型
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.DealDto.UserId">
+            <summary>
+            谁出的牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.DealDto.IsRegular">
+            <summary>
+            是否合法
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.PlayerDto.UserId">
+            <summary>
+            用户ID
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.PlayerDto.Identity">
+            <summary>
+            身份
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.Fight.PlayerDto.CardList">
+            <summary>
+            自己拥有的手牌
+            </summary>
+        </member>
+        <member name="P:Protocol.Dto.Fight.PlayerDto.HasCard">
+            <summary>
+            是否还有手牌
+            </summary>
+        </member>
+        <member name="M:Protocol.Dto.Fight.PlayerDto.Add(Protocol.Dto.Fight.CardDto)">
+            <summary>
+            添加手牌
+            </summary>
+            <param name="card"></param>
+        </member>
+        <member name="M:Protocol.Dto.Fight.PlayerDto.Remove(Protocol.Dto.Fight.CardDto)">
+            <summary>
+            移除卡牌
+            </summary>
+            <param name="card"></param>
+        </member>
+        <member name="T:Protocol.Dto.MatchRoomDto">
+            <summary>
+            房间数据对应的传输模型
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.MatchRoomDto.UIdUserDict">
+            <summary>
+            用户id对应的传输模型
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.MatchRoomDto.ReadyUIdList">
+            <summary>
+            准备的玩家id列表
+            </summary>
+        </member>
+        <member name="F:Protocol.Dto.MatchRoomDto.UIdlist">
+            <summary>
+            储存玩家进入的顺序
+            </summary>
+        </member>
+        <member name="M:Protocol.Dto.MatchRoomDto.ResetPosition(System.Int32)">
+            <summary>
+            桌位的变化
+            </summary>
+        </member>
+        <member name="T:Protocol.Dto.UserDto">
+            <summary>
+            用户数据的传输模型
+            </summary>
+        </member>
+        <member name="F:Protocol.AccountCode.REGIST_CREQ">
+            <summary>
+            注册的操作码
+            </summary>
+        </member>
+        <member name="F:Protocol.AccountCode.LOGIN">
+            <summary>
+            登陆的操作码
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.GRAB_LANDLORD_CREQ">
+            <summary>
+            抢地主
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.GRAB_LANDLORD_BRO">
+            <summary>
+            广播抢地主
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.TUR_GRAB_BRO">
+            <summary>
+            下一个玩家枪地主
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.DEAL_CREQ">
+            <summary>
+            客户端发起出牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.DEAL_SRES">
+            <summary>
+            单对客户端发起的响应
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.DEAL_BRO">
+            <summary>
+            服务器广播出牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.PASS_CREQ">
+            <summary>
+            客户端发起不出牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.PASS_SRES">
+            <summary>
+            服务器发客户端不出牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.TURN_DEAL_BRO">
+            <summary>
+            服务器广播转换出牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.LEAVE_BRO">
+            <summary>
+            有玩家离开
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.OVER_BRO">
+            <summary>
+            广播游戏结束
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.FightCode.GET_CADE_SERS">
+            <summary>
+            服务器给客户端卡牌的响应 发牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.MatchCode.ENTER_CREQ">
+            <summary>
+            进入匹配
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.MatchCode.LEAVE_CREQ">
+            <summary>
+            离开匹配
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.MatchCode.READY_CREQ">
+            <summary>
+            准备
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.MatchCode.START_BRO">
+            <summary>
+            开始游戏
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.OpCode.ACCOUNT">
+            <summary> 
+            账号模块
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.OpCode.USER">
+            <summary>
+            用户模块
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.OpCode.MATCH">
+            <summary>
+            匹配模块
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.OpCode.CHAT">
+            <summary>
+            聊天模块
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.OpCode.FIGHT">
+            <summary>
+            战斗模块
+            </summary>
+        </member>
+        <member name="T:Protocol.Code.UserCode">
+            <summary>
+            用户的操作码  区分客户端和服务器
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.UserCode.GET_INFO_CREQ">
+            <summary>
+            获取信息
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.UserCode.CREATE_CREQ">
+            <summary>
+            创建角色
+            </summary>
+        </member>
+        <member name="F:Protocol.Code.UserCode.ONLINE_CREQ">
+            <summary>
+            角色上线
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardColor.CLUB">
+            <summary>
+            梅花
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardColor.HEART">
+            <summary>
+            红桃
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardColor.SPADE">
+            <summary>
+            黑桃
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardColor.SQUARE">
+            <summary>
+            方片
+            </summary>
+        </member>
+        <member name="M:Protocol.Constant.CardColor.GetCardNamr(System.Int32,System.Int32)">
+            <summary>
+            获取完整的名称
+            </summary>
+            <param name="color"></param>
+            <param name="weight"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardColor.GetString(System.Int32)">
+            <summary>
+            获取花色
+            </summary>
+            <param name="color"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardColor.GetWeight(System.Int32)">
+            <summary>
+            获取权值
+            </summary>
+            <param name="weight"></param>
+            <returns></returns>
+        </member>
+        <member name="T:Protocol.Constant.CardType">
+            <summary>
+            出牌的类型
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.NONE">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.SINGE">
+            <summary>
+            单牌
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.DOUBLE">
+            <summary>
+            对
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.STRAIGHT">
+            <summary>
+            顺子
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.DOUBLE_STRAIGHT">
+            <summary>
+            双顺
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.TRIPLE_STRAIGHT">
+            <summary>
+            3顺
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.THREE">
+            <summary>
+            3不带
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.THREE_ONE">
+            <summary>
+            3带1
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.THREE_TWO">
+            <summary>
+            3带2
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.BOOM">
+            <summary>
+            炸弹
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardType.JOKER_BOOM">
+            <summary>
+            王炸
+            </summary>
+        </member>
+        <member name="M:Protocol.Constant.CardType.IsSingle(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            是否是单牌
+            </summary>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.IsDouble(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            是否是对
+            </summary>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.IsStraight(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            是不是顺子
+            </summary>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.IsDoubleStraight(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            是否是双顺
+            </summary>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.IsTripleStraight(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            是否是飞机
+            </summary>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.IsThree(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            3不带
+            </summary>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.IsThreeAndOne(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            3带1
+            </summary>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.IsThreeAndTwo(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            3带2
+            </summary>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.IsBoom(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            是不是炸弹
+            </summary>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.IsJokerBoom(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            是不是王炸
+            </summary>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.isHaveCard(System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            
+            </summary>
+            <param name="type"></param>
+            <param name="weight"></param>
+            <param name="lenght"></param>
+            <param name="cardList"></param>
+        </member>
+        <member name="M:Protocol.Constant.CardType.getSinge(System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            单牌大于
+            </summary>
+            <param name="weight"></param>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.combinationCards(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            组合排牌的个数  权重 --  牌的模型
+            </summary>
+            <param name="cardList"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.get_Boom(System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            准备出炸弹
+            </summary>
+            <param name="weight"></param>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.isJoker_Boom(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto},Protocol.Dto.Fight.AICardDto@)">
+            <summary>
+            是否有王炸
+            </summary>
+            <param name="cards"></param>
+            <param name="aiCardDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.isBoom(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto},System.Int32,Protocol.Dto.Fight.AICardDto@)">
+            <summary>
+            是否有常规炸弹
+            </summary>
+            <param name="cards">手牌</param>
+            <param name="weight">单牌的权重 </param>
+            <param name="aiCardDto"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.isDouble_Straight(System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            判断是不是双顺
+            </summary>
+            <param name="type"></param>
+            <param name="weight"></param>
+            <param name="lenght"></param>
+            <param name="count"></param>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.is_Straight(System.Int32,System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+             判断是不是顺子的格式
+            </summary>
+            <param name="type"></param>
+            <param name="weight"></param>
+            <param name="lenght"></param>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.isTriple_Straight(System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            是否是3顺
+            </summary>
+            <param name="type"></param>
+            <param name="weight"></param>
+            <param name="lenght"></param>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.getThree(System.Int32,System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            获取三不带
+            </summary>
+            <param name="weight"></param>
+            <param name="type"></param>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.getThree_Card(System.Int32,System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+            获取3带 
+            </summary>
+            <param name="weight"></param>
+            <param name="type"></param>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="M:Protocol.Constant.CardType.getThree_Base(System.Int32,System.Int32,System.Int32,System.Collections.Generic.List{Protocol.Dto.Fight.CardDto})">
+            <summary>
+             获取三带一
+            </summary>
+            <param name="weight"></param>
+            <param name="type"></param>
+            <param name="count"></param>
+            <param name="cards"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Protocol.Constant.CardWeight.SJOKER">
+            <summary>
+            小王
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.CardWeight.LJOKER">
+            <summary>
+            大王
+            </summary>
+        </member>
+        <member name="M:Protocol.Constant.CardWeight.GetWeight(System.Collections.Generic.List{Protocol.Dto.Fight.CardDto},System.Int32)">
+            <summary>
+            获取卡牌的权值  3带是取3带的权重 剩下的就的权重相加
+            </summary>
+            <param name="cardList"></param>
+            <param name="cardType"></param>
+            <returns></returns>
+        </member>
+        <member name="F:Protocol.Constant.Identity.FARMER">
+            <summary>
+            农民
+            </summary>
+        </member>
+        <member name="F:Protocol.Constant.Identity.LANDLORD">
+            <summary>
+            地主
+            </summary>
+        </member>
+    </members>
+</doc>
